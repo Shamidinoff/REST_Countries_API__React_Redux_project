@@ -1,3 +1,8 @@
-# Frontend Mentor - REST Countries API with color theme switcher solution
+# TODO:
 
-This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca).
+1 Переключение светлой/темной темы
+2 Получение списка стран и вывод в UI
+3 Фильтрация стран по поиску
+4 Фильтрация стран по региону
+5 Получение расширенной информации о выбранной стране
+6 Получение списка соседей
