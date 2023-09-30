@@ -1,6 +1,6 @@
 export const SET_COUNTRIES = "@@country/SET_COUNTRIES";
 export const SET_LOADING = "@@country/SET_LOADING";
-export const SET_ERROR = "@@country/SET_ERROR";
+export const SET_ERROR = "@@country/ERROR";
 
 export const setCountries = (countries) => ({
   type: SET_COUNTRIES,
@@ -13,7 +13,7 @@ export const setLoading = () => ({
 
 export const setError = (err) => ({
   type: SET_ERROR,
-  payload: SET_ERROR,
+  payload: err,
 });
 
 export const loadCountries =
@@ -24,5 +24,5 @@ export const loadCountries =
     client
       .get(api.ALL_COUNTRIES)
       .then(({ data }) => dispatch(setCountries(data)))
-      .then((err) => dispatch(setError(err.message)));
+      .catch((err) => dispatch(setError(err.message)));
   };
